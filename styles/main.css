@@ -1,4 +1,136 @@
-@import url(style.css);
-@import url(header/header.css);
-@import url(first/first.css);
-@import url(button/button.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #727272;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  color: #000000;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: calc(100% - 60px);
+}
+@media (max-width: 576px) {
+  .wrapper {
+    width: calc(100% - 30px);
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.pusto {
+  width: auto;
+  height: 144px;
+}
+
+.main {
+  background-color: #EEEFF1;
+  padding-top: 162px;
+}
+
+.header {
+  background-color: #EEEFF1;
+  padding: 72px 0;
+}
+.header__logo {
+  float: left;
+  width: 85px;
+  display: block;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__nav {
+  float: right;
+}
+.header__nav ul {
+  list-style: none;
+}
+.header__nav li {
+  float: left;
+  margin-right: 42px;
+}
+.header__nav li:last-of-type {
+  margin-right: 0;
+}
+.header__item {
+  text-transform: uppercase;
+  transition: 0.3s;
+  line-height: 38px;
+}
+.header__item:hover {
+  color: #34547A;
+}
+.header__item_active {
+  color: #34547A;
+  font-weight: 500;
+}
+
+@media (max-width: 824px) {
+  .header__logo, .header_nav {
+    float: none;
+  }
+  .header__logo {
+    margin: 0 auto;
+  }
+  .header__nav {
+    margin: 0 auto;
+    width: max-content;
+    margin-top: 40px;
+  }
+}
+
+.first__image {
+  padding-left: 79px;
+  float: left;
+}
+
+.first__description {
+  padding-left: calc(100% - 566px);
+}
+.first__description p {
+  padding-top: 60px;
+}
+.first__description h1 {
+  color: #000000;
+}
+
+.first {
+  background-color: #EEEFF1;
+}
+
+.button {
+  width: 225px;
+  height: 65px;
+  background-color: #34547A;
+  border-color: #34547A;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #EEEFF1;
+  text-transform: uppercase;
+  margin-top: 60px;
+  border: none;
+}
+
+/*# sourceMappingURL=main.css.map */
