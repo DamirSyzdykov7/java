@@ -2,10 +2,17 @@
     background-color: $color-gray;
     padding: 72px 0;
 
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
     &__logo {
-        float: left;
-        width: 85px;
-        display: block;
+        flex-shrink: 0;
+        width: 84px;
+        
     }
 
     &__logo img{
@@ -13,69 +20,51 @@
     }
     
     &__nav {
-        float: right;
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            
+            column-gap: 42px;
+        }
+        li {
+            flex-shrink: 0;
+        }
     }
     
-    &__nav ul {
-        list-style: none;
-    }
-    
-    &__nav li {
-        float: left;
-        margin-right: 42px;
-    }
-
-    &__nav li:last-of-type {
-        margin-right: 0;
-    }
-
     &__item {
         text-transform: uppercase;
         transition: .3s;
-        line-height: 38px;
-    }
 
-    &__item:hover {
-        color: $color-primary;
-    }
-
-    &__item_active {
-        color: $color-primary;
-        font-weight: 500;
+        &:hover {
+            color: $color-primary;
+        }
+        
+        &_active {
+            color: $color-primary;
+            font-weight: 500;
+        }
     }
 }
 
 .header {
     @media (max-width: $tablet) {
-        &__logo, &_nav {
-            float: none;
+        .wrapper {
+            flex-direction: column;
+            row-gap: 20px;
         }
 
         &__logo {
-            margin: 0 auto;
-        }
-
-        &__nav {
-            margin: 0 auto;
-            width: max-content;
-            margin-top: 40px;
+            align-items: center;
         }
     }
-}
 
-.first__image {
-    padding-left: 79px;
-    float: left;
-}
+    @media (max-width:$mobile) {
 
-.first__description {
-    padding-left: calc(100% - 566px);
-
-    p {
-        padding-top: 60px;
-    }
-
-    h1 {
-        color: $color-black;
+        ul {
+            justify-content: center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
     }
 }

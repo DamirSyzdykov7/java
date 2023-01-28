@@ -1,0 +1,33 @@
+.footer {
+    background-color: $color-primary;
+    flex: 0 0 auto;
+    padding: 50px 0;
+    color: white;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__sitename {
+        font-weight: 400;
+        font-size: 21px;
+    }
+    
+    &__copyright {
+        display: flex;
+        gap: 0 20px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__socials {
+        display: flex;
+        column-gap: 8px;
+
+        a {
+            width: 48px;
+        }
+    }
+}
